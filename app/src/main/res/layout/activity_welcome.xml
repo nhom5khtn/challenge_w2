@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/mask_modify"
+    android:orientation="vertical"
+    android:visibility="visible"
+    tools:context=".MainActivity">
+
+    <Button
+        android:layout_width="55dp"
+        android:layout_height="32dp"
+        android:layout_marginTop="32dp"
+        android:layout_marginEnd="16dp"
+        android:background="@drawable/button_shape"
+        android:src="@drawable/skip_icon"
+        android:text="Skip"
+        android:textAllCaps="false"
+        android:textColor="@color/orange"
+        android:textSize="9sp"
+        app:backgroundTint="@color/white"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/welcomeTo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="150dp"
+        android:fontFamily="@font/sofia_pro_semi_bold"
+        android:text="Welcome to"
+        android:textAlignment="textStart"
+        android:textColor="@color/black"
+        android:textSize="50sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/foodHub"
+        android:layout_width="219dp"
+        android:layout_height="68dp"
+        android:layout_marginStart="32dp"
+        android:fontFamily="@font/sofia_pro_semi_bold"
+        android:text="Food Hub"
+        android:textAlignment="textStart"
+        android:textColor="@color/orange"
+        android:textSize="50sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/welcomeTo" />
+
+    <TextView
+        android:id="@+id/slogan"
+        android:layout_width="266dp"
+        android:layout_height="54dp"
+        android:layout_marginStart="32dp"
+        android:fontFamily="@font/sofia_pro_regular"
+        android:text="Your favourite foods delivered fast at your door."
+        android:textAlignment="textStart"
+        android:textColor="@android:color/black"
+        android:textSize="18sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/foodHub" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="80dp"
+        android:layout_height="24dp"
+        android:layout_marginBottom="244dp"
+        android:fontFamily="@font/sofia_pro_medium"
+        android:gravity="center_vertical"
+        android:text="sign in with"
+        android:textAlignment="center"
+        android:textColor="@color/white"
+        android:textSize="14sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="292.46dp"
+        android:layout_height="1dp"
+        android:layout_gravity="center_vertical"
+        android:layout_marginStart="56dp"
+        android:layout_marginTop="132dp"
+        android:background="@drawable/line"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/slogan" />
+
+    <RelativeLayout
+        android:id="@+id/relativeLayout"
+        android:layout_width="294dp"
+        android:layout_height="131dp"
+        android:layout_marginStart="56dp"
+        android:layout_marginTop="12dp"
+        android:orientation="vertical"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView2">
+
+        <Button
+            android:id="@+id/fbButton"
+            android:layout_width="139dp"
+            android:layout_height="54dp"
+            android:background="@drawable/button_shape"
+            android:drawableLeft="@drawable/fb_icon"
+            android:fontFamily="@font/sofia_pro_medium"
+            android:text="FACEBOOK"
+            android:textColor="@color/black"
+            android:textSize="11sp"
+            app:backgroundTint="@color/white" />
+
+        <Button
+            android:id="@+id/ggButton"
+            android:layout_width="139dp"
+            android:layout_height="54dp"
+            android:layout_marginLeft="16dp"
+            android:layout_toRightOf="@id/fbButton"
+            android:background="@drawable/button_shape"
+            android:drawableLeft="@drawable/gg_icon"
+            android:fontFamily="@font/sofia_pro_medium"
+            android:text="GOOGLE"
+            android:textColor="@color/black"
+            android:textSize="11sp"
+            app:backgroundTint="@color/white" />
+
+        <Button
+            android:id="@+id/epButton"
+            android:layout_width="293dp"
+            android:layout_height="54dp"
+            android:layout_below="@+id/fbButton"
+            android:layout_marginTop="23dp"
+            android:background="@drawable/button_shape"
+            android:backgroundTint="@color/white"
+            android:fontFamily="@font/sofia_pro_medium"
+            android:text="Start with email or phone"
+            android:textAllCaps="false"
+            android:textColor="@color/white"
+            app:backgroundTint="@color/material_on_primary_disabled" />
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="213.5dp"
+        android:layout_height="19dp"
+        android:layout_marginStart="96dp"
+        android:layout_marginTop="24dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/relativeLayout">
+
+        <TextView
+            android:layout_width="162dp"
+            android:layout_height="19dp"
+            android:layout_gravity="center"
+            android:fontFamily="@font/sofia_pro_regular"
+            android:gravity="center"
+            android:text="Alreday have an account?"
+            android:textAlignment="textStart"
+            android:textColor="@color/white"
+            android:textSize="13.5sp" />
+
+        <ImageButton
+            android:id="@+id/signInButton"
+            android:layout_width="42dp"
+            android:layout_height="19dp"
+            android:layout_marginLeft="9.5dp"
+            android:background="@null"
+            android:fontFamily="@font/sofia_pro_medium"
+            android:src="@drawable/sign_in_ic"
+            android:textAllCaps="false"
+            android:textSize="14sp" />
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
