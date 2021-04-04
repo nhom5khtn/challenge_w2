@@ -16,7 +16,6 @@
         android:layout_marginTop="32dp"
         android:layout_marginEnd="16dp"
         android:background="@drawable/button_shape"
-        android:src="@drawable/skip_icon"
         android:text="Skip"
         android:textAllCaps="false"
         android:textColor="@color/orange"
