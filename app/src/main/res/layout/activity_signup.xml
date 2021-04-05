@@ -1,0 +1,201 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/signup_login_bg">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="76dp"
+        android:fontFamily="@font/sofia_pro_semi_bold"
+        android:gravity="center"
+        android:text="Sign Up"
+        android:textColor="@color/black"
+        android:textSize="36.41sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <RelativeLayout
+        android:id="@+id/relativeLayout2"
+        android:layout_width="341dp"
+        android:layout_height="337dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginBottom="236dp"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <TextView
+            android:id="@+id/tvFullName"
+            android:layout_width="106dp"
+            android:layout_height="21dp"
+            android:fontFamily="@font/sofia_pro_regular"
+            android:text="Full name"
+            android:textSize="16sp" />
+
+        <EditText
+            android:id="@+id/edtFullName"
+            android:layout_width="339dp"
+            android:layout_height="65dp"
+            android:layout_below="@+id/tvFullName"
+            android:layout_marginTop="9dp"
+            android:background="@drawable/button_shape_1"
+            android:elevation="5dp"
+            app:backgroundTint="@color/white" />
+
+        <TextView
+            android:id="@+id/tvEmail"
+            android:layout_width="106dp"
+            android:layout_height="21dp"
+            android:layout_below="@+id/edtFullName"
+            android:layout_marginTop="21dp"
+            android:fontFamily="@font/sofia_pro_regular"
+            android:text="E-mail"
+            android:textSize="16sp" />
+
+        <EditText
+            android:id="@+id/edtEmail"
+            android:layout_width="339dp"
+            android:layout_height="65dp"
+            android:layout_below="@+id/tvEmail"
+            android:layout_marginTop="9dp"
+            android:background="@drawable/button_shape_1"
+            android:elevation="5dp"
+            app:backgroundTint="@color/white" />
+
+        <TextView
+            android:id="@+id/tvPhone"
+            android:layout_width="wrap_content"
+            android:layout_height="21dp"
+            android:layout_below="@+id/edtEmail"
+            android:layout_marginTop="21dp"
+            android:fontFamily="@font/sofia_pro_regular"
+            android:text="Password"
+            android:textSize="16sp" />
+
+        <EditText
+            android:layout_width="339dp"
+            android:layout_height="65dp"
+            android:layout_below="@+id/tvPhone"
+            android:layout_marginTop="9dp"
+            android:background="@drawable/button_shape_1"
+            android:elevation="5dp"
+            app:backgroundTint="@color/white" />
+
+    </RelativeLayout>
+
+    <Button
+        android:id="@+id/button"
+        android:layout_width="248dp"
+        android:layout_height="60dp"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/button_shape"
+        android:fontFamily="@font/sofia_pro_medium"
+        android:text="SIGN UP"
+        android:textColor="@color/white"
+        android:textSize="15sp"
+        app:backgroundTint="@color/orange"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.496"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/relativeLayout2" />
+
+    <LinearLayout
+        android:layout_width="213dp"
+        android:layout_height="33dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/button">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:fontFamily="@font/sofia_pro_medium"
+            android:gravity="center"
+            android:text="Alreday have an account?"
+            android:textAlignment="textStart"
+            android:textColor="@color/black"
+            android:textSize="13.5sp" />
+
+        <Button
+            android:layout_width="48dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="0dp"
+            android:background="@color/white"
+            android:enabled="false"
+            android:fontFamily="@font/sofia_pro_medium"
+            android:paddingLeft="0dp"
+            android:paddingTop="0dp"
+            android:paddingRight="0dp"
+            android:paddingBottom="0dp"
+            android:text="Login"
+            android:textAlignment="textStart"
+            android:textAllCaps="false"
+            android:textColor="@color/orange"
+            android:textSize="12sp"
+            app:backgroundTint="@color/white" />
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="80dp"
+        android:layout_height="24dp"
+        android:layout_marginBottom="80dp"
+        android:fontFamily="@font/sofia_pro_medium"
+        android:gravity="center_vertical"
+        android:text="Sign up with"
+        android:textAlignment="center"
+        android:textColor="@color/black"
+        android:textSize="14sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="292.46dp"
+        android:layout_height="1dp"
+        android:layout_gravity="center_vertical"
+        android:layout_marginStart="56dp"
+        android:background="@drawable/black_line"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:layout_editor_absoluteY="640dp" />
+
+    <Button
+        android:id="@+id/fbButton"
+        android:layout_width="139dp"
+        android:layout_height="54dp"
+        android:background="@drawable/button_shape"
+        android:drawableLeft="@drawable/fb_icon"
+        android:fontFamily="@font/sofia_pro_medium"
+        android:text="FACEBOOK"
+        android:textColor="@color/black"
+        android:textSize="11sp"
+        app:backgroundTint="@color/white"
+        tools:layout_editor_absoluteX="56dp"
+        tools:layout_editor_absoluteY="661dp" />
+
+    <Button
+        android:id="@+id/ggButton"
+        android:layout_width="139dp"
+        android:layout_height="54dp"
+        android:layout_toRightOf="@id/fbButton"
+        android:background="@drawable/button_shape"
+        android:drawableLeft="@drawable/gg_icon"
+        android:fontFamily="@font/sofia_pro_medium"
+        android:text="GOOGLE"
+        android:textColor="@color/black"
+        android:textSize="11sp"
+        app:backgroundTint="@color/white"
+        tools:layout_editor_absoluteX="210dp"
+        tools:layout_editor_absoluteY="661dp" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
