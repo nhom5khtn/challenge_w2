@@ -9,9 +9,13 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.FirstWeekChallenge">
-        <activity android:name=".WelcomeActivity2"></activity>
-        <activity android:name=".MainActivity2" />
-        <activity android:name=".MainActivity">
+        <activity android:name=".Onboarding_threeActivity"></activity>
+        <activity android:name=".Onboarding_twoActivity" />
+        <activity android:name=".Onboarding_oneActivity" />
+        <activity android:name=".WelcomeActivity"/>
+        <activity
+            android:name=".SplashActivity"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

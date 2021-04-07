@@ -7,12 +7,16 @@
     android:background="@color/white">
 
     <View
-        android:id="@+id/view"
+        android:id="@+id/view1"
         android:layout_width="310dp"
         android:layout_height="324.5dp"
         android:layout_marginStart="48dp"
-        android:layout_marginTop="56dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="53dp"
+        android:layout_marginBottom="41dp"
         android:background="@drawable/onboarding_2_img"
+        app:layout_constraintBottom_toTopOf="@+id/view2"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -20,22 +24,26 @@
         android:id="@+id/view2"
         android:layout_width="46.92dp"
         android:layout_height="5dp"
-        android:layout_marginTop="42dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="8dp"
         android:background="@drawable/onboarding_2_slide_bar"
-        app:layout_constraintEnd_toEndOf="@+id/view"
-        app:layout_constraintStart_toStartOf="@+id/view"
-        app:layout_constraintTop_toBottomOf="@+id/view" />
+        app:layout_constraintBottom_toTopOf="@+id/textView4"
+        app:layout_constraintEnd_toEndOf="@+id/view1"
+        app:layout_constraintStart_toStartOf="@+id/view1"
+        app:layout_constraintTop_toBottomOf="@+id/view1" />
 
     <TextView
         android:id="@+id/textView4"
         android:layout_width="336dp"
         android:layout_height="86dp"
-        android:layout_marginTop="17dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="8dp"
         android:fontFamily="@font/sofia_pro_medium"
         android:gravity="center"
         android:text="Even to space with us! Together"
         android:textColor="@color/black"
         android:textSize="36sp"
+        app:layout_constraintBottom_toTopOf="@+id/textView5"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/view2" />
@@ -56,12 +64,15 @@
         app:layout_constraintTop_toBottomOf="@+id/textView4" />
 
     <ImageButton
+        android:id="@+id/btn1"
         android:layout_width="67dp"
         android:layout_height="67dp"
-        android:layout_marginTop="24dp"
+        android:layout_marginTop="32dp"
+        android:layout_marginBottom="60dp"
         android:background="@drawable/button_shape_circle"
         android:src="@drawable/onboarding_whitearrow"
         app:backgroundTint="@color/orange"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView5" />

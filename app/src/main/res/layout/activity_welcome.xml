@@ -8,7 +8,7 @@
     android:background="@drawable/mask_modify"
     android:orientation="vertical"
     android:visibility="visible"
-    tools:context=".MainActivity">
+    tools:context=".SplashActivity">
 
     <Button
         android:layout_width="55dp"
