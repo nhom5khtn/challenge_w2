@@ -9,10 +9,10 @@ import android.widget.Toast
 import androidx.fragment.app.DialogFragment
 
 
-class PhoneDialog : DialogFragment() {
+class FullNameDialog : DialogFragment() {
     var activityCallback: OnFragmentManager? = null
     interface OnFragmentManager {
-        fun onPhoneSelected(phone: String)
+        fun onFullNameSelected(fullName: String)
     }
 
     override fun onAttach(context: Context) {
@@ -37,7 +37,7 @@ class PhoneDialog : DialogFragment() {
         alertDialogBuilder.setPositiveButton("OK") { dialog, which ->
             val use = edt!!.text.toString()
             Toast.makeText(activity, "User:   $use", Toast.LENGTH_SHORT).show()
-            activityCallback?.onPhoneSelected(use)
+            activityCallback?.onFullNameSelected(use)
         }
         return alertDialogBuilder.create()
     }
