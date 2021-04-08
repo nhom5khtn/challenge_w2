@@ -1,2 +1,2 @@
-# welcome-ui-example
-![welcome](https://user-images.githubusercontent.com/74778865/113503149-2416c780-955a-11eb-8b73-3f3d2138a4a2.PNG)
+# Challenge-week2-demo
+![demo_w2](https://user-images.githubusercontent.com/81680677/114067950-90315c80-98c7-11eb-987d-01104927df01.gif)
