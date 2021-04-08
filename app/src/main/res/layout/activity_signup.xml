@@ -78,12 +78,18 @@
             android:textSize="16sp" />
 
         <EditText
+            android:id="@+id/tvPass"
             android:layout_width="339dp"
             android:layout_height="65dp"
             android:layout_below="@+id/tvPhone"
             android:layout_marginTop="9dp"
             android:background="@drawable/button_shape_1"
             android:elevation="5dp"
+            android:inputType="textPassword"
+            android:drawablePadding="8dp"
+            android:padding="10dp"
+            android:singleLine="true"
+            android:maxLines="1"
             app:backgroundTint="@color/white" />
 
     </RelativeLayout>
@@ -142,60 +148,5 @@
             app:backgroundTint="@color/white" />
 
     </LinearLayout>
-
-    <TextView
-        android:id="@+id/textView2"
-        android:layout_width="80dp"
-        android:layout_height="24dp"
-        android:layout_marginBottom="80dp"
-        android:fontFamily="@font/sofia_pro_medium"
-        android:gravity="center_vertical"
-        android:text="Sign up with"
-        android:textAlignment="center"
-        android:textColor="@color/black"
-        android:textSize="14sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
-        app:layout_constraintStart_toStartOf="parent" />
-
-    <TextView
-        android:id="@+id/textView"
-        android:layout_width="292.46dp"
-        android:layout_height="1dp"
-        android:layout_gravity="center_vertical"
-        android:layout_marginStart="56dp"
-        android:background="@drawable/black_line"
-        app:layout_constraintStart_toStartOf="parent"
-        tools:layout_editor_absoluteY="640dp" />
-
-    <Button
-        android:id="@+id/fbButton"
-        android:layout_width="139dp"
-        android:layout_height="54dp"
-        android:background="@drawable/button_shape"
-        android:drawableLeft="@drawable/fb_icon"
-        android:fontFamily="@font/sofia_pro_medium"
-        android:text="FACEBOOK"
-        android:textColor="@color/black"
-        android:textSize="11sp"
-        app:backgroundTint="@color/white"
-        tools:layout_editor_absoluteX="56dp"
-        tools:layout_editor_absoluteY="661dp" />
-
-    <Button
-        android:id="@+id/ggButton"
-        android:layout_width="139dp"
-        android:layout_height="54dp"
-        android:layout_toRightOf="@id/fbButton"
-        android:background="@drawable/button_shape"
-        android:drawableLeft="@drawable/gg_icon"
-        android:fontFamily="@font/sofia_pro_medium"
-        android:text="GOOGLE"
-        android:textColor="@color/black"
-        android:textSize="11sp"
-        app:backgroundTint="@color/white"
-        tools:layout_editor_absoluteX="210dp"
-        tools:layout_editor_absoluteY="661dp" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
