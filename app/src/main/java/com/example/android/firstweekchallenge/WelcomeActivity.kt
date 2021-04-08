@@ -22,11 +22,11 @@ class WelcomeActivity : AppCompatActivity() {
         val fbButton = findViewById<Button>(R.id.fbButton)
         val ggButton = findViewById<Button>(R.id.ggButton)
         val signInButton = findViewById<ImageButton>(R.id.signInButton)
-        val textDescription4 = findViewById<TextView>(R.id.tvQuestion)
+        //val textDescription4 = findViewById<TextView>(R.id.tvQuestion)
 
 
         epButton.setOnClickListener {
-            val intent = Intent(this@WelcomeActivity, SignupActivity::class.java)
+            val intent = Intent(this@WelcomeActivity, LoginAcitvity::class.java)
             startActivity(intent)
         }
     }
