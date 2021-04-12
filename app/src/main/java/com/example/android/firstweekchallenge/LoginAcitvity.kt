@@ -7,40 +7,55 @@ import android.widget.Button
 import android.widget.EditText
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
+import androidx.databinding.DataBindingUtil
+import com.example.android.firstweekchallenge.databinding.ActivityLoginBinding
 
 class LoginAcitvity : AppCompatActivity() {
+
+    private lateinit var binding: ActivityLoginBinding
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
-        setContentView(R.layout.activity_login)
+        binding = DataBindingUtil.setContentView(this,R.layout.activity_login)
 
-        val edtEmail = findViewById<EditText>(R.id.edtEmail)
-        val edtPassword = findViewById<EditText>(R.id.edtPassword)
-        val btnLogin = findViewById<Button>(R.id.btnLogin)
+        //setContentView(R.layout.activity_login)
 
+//        val edtEmail = findViewById<EditText>(R.id.edtEmail)
+//        val edtPassword = findViewById<EditText>(R.id.edtPassword)
+//        val btnLogin = findViewById<Button>(R.id.btnLogin)
+//        val btnSignUp = findViewById<Button>(R.id.btnSignUp)
 
-        btnLogin.setOnClickListener {
+        binding.btnSignUp.setOnClickListener {
+            val intent = Intent(this, SignUpActivity::class.java)
+            startActivity(intent)
+            finish()
+        }
+
+        binding.btnLogin.setOnClickListener {
             val intent = Intent(this, ProfileActivity::class.java)
-            if (edtEmail.text.trim().toString().isNullOrEmpty()) {
-                edtEmail.setError("enter email please!");
+            if (binding.edtEmail.text.trim().toString().isNullOrEmpty()) {
+                binding.edtEmail.setError("enter email please!");
             }
-            if (edtPassword.text.trim().toString().isNullOrEmpty()) {
-                edtPassword.setError("enter password please!");
+            if (binding.edtPassword.text.trim().toString().isNullOrEmpty()) {
+                binding.edtPassword.setError("enter password please!");
             }
-            if (edtEmail.text.trim().toString() == "ronaldo@gmail.com" && edtPassword.text.trim().toString() == "123456") {
+            if (binding.edtEmail.text.trim().toString() == DataStore.email && binding.edtPassword.text.trim().toString() == DataStore.password) {
                 Toast.makeText(applicationContext, "successful login!", Toast.LENGTH_SHORT).show()
                 val b = Bundle()
-                b.putParcelable("Account", Account(edtEmail.text.trim().toString()))
+                b.putParcelable("Account", Account(binding.edtEmail.text.trim().toString()))
                 intent.putExtras(b)
                 startActivity(intent)
                 finish()
             } else {
                 val alertDialogBuilder = android.app.AlertDialog.Builder(this)
                 alertDialogBuilder.setMessage("failed login!")
-                alertDialogBuilder.setPositiveButton("OK") { dialog: DialogInterface,
-                                                             which: Int ->
-                    Toast.makeText(applicationContext, "please try again!", Toast.LENGTH_SHORT).show()
+                alertDialogBuilder.setPositiveButton("OK") {
+                        dialog: DialogInterface,
+                        which: Int
+                    ->
+                    Toast.makeText(applicationContext, "please try again!", Toast.LENGTH_SHORT)
+                        .show()
                 }
                 alertDialogBuilder.show()
             }

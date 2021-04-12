@@ -1,0 +1,93 @@
+package com.example.android.firstweekchallenge
+
+import android.content.DialogInterface
+import android.content.Intent
+import androidx.appcompat.app.AppCompatActivity
+import android.os.Bundle
+import android.provider.ContactsContract
+import android.renderscript.ScriptGroup
+import android.util.Log
+import android.view.View
+import android.widget.*
+//import androidx.databinding.DataBindingUtil
+//import com.example.android.firstweekchallenge.databinding.ActivitySignupBinding
+
+class SignUpActivity : AppCompatActivity() {
+
+//    private lateinit var binding: ActivitySignupBinding
+
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+//        Log.e("WelcomeActivity", "welcome activity - on start")
+//        binding = DataBindingUtil.setContentView(this,R.layout.activity_signup)
+        setContentView(R.layout.activity_signup)
+        val edtFullName = findViewById<EditText>(R.id.edtFullName)
+        val edtEmail = findViewById<EditText>(R.id.edtEmail)
+        val edtPassword = findViewById<EditText>(R.id.edtPassword)
+        val btnSignUp = findViewById<Button>(R.id.btnSignUp)
+
+        btnSignUp.setOnClickListener {
+            val intent = Intent(this, LoginAcitvity::class.java)
+
+            if (edtFullName.text.trim().toString().isNullOrEmpty()) {
+                edtFullName.setError("enter full name please!");
+            }
+            if (edtEmail.text.trim().toString().isNullOrEmpty()) {
+                edtEmail.setError("enter email please!");
+            }
+            if (edtPassword.text.trim().toString().isNullOrEmpty()) {
+                edtPassword.setError("enter password please!");
+            }
+
+            if (edtFullName.text.trim().toString() != "" && edtEmail.text.trim().toString() != "" && edtPassword.text.trim().toString() != ""){
+                var fullName = DataStore.fullName;
+                var email = DataStore.email;
+                var password = DataStore.password;
+
+                DataStore.fullName = edtFullName.text.trim().toString();
+                DataStore.email = edtEmail.text.trim().toString();
+                DataStore.password = edtPassword.text.trim().toString();
+
+                Toast.makeText(applicationContext, "successful sign up!", Toast.LENGTH_SHORT).show()
+                val b = Bundle()
+                b.putParcelable("Account", Account(edtFullName.text.trim().toString(),edtEmail.text.trim().toString(),edtPassword.text.trim().toString()))
+                intent.putExtras(b)
+                startActivity(intent)
+                finish()
+            }else{
+                val alertDialogBuilder = android.app.AlertDialog.Builder(this)
+                alertDialogBuilder.setMessage("failed sign up!")
+                alertDialogBuilder.setPositiveButton("OK") { dialog: DialogInterface,
+                                                             which: Int ->
+                    Toast.makeText(applicationContext, "please try again!", Toast.LENGTH_SHORT).show()
+                }
+                alertDialogBuilder.show()
+            }
+        }
+    }
+
+//    override fun onStart() {
+//        super.onStart()
+//        Log.e("SignUpActivity", "sign up activity - on start")
+//    }
+//
+//    override fun onResume() {
+//        super.onResume()
+//        Log.e("SignUpActivity", "sign up activity - on Resume")
+//    }
+//
+//    override fun onPause() {
+//        super.onPause()
+//        Log.e("SignUpActivity", "sign up activity - on Pause")
+//    }
+//
+//    override fun onStop() {
+//        super.onStop()
+//        Log.e("SignUpActivity", "sign up activity - on Stop")
+//    }
+//
+//    override fun onDestroy() {
+//        super.onDestroy()
+//        Log.e("SignUpActivity", "sign up activity - on Destroy")
+//    }
+}

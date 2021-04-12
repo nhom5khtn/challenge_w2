@@ -7,10 +7,11 @@
     android:background="@drawable/signup_login_bg">
 
     <TextView
+        android:id="@+id/textView6"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="32dp"
-        android:layout_marginTop="76dp"
+        android:layout_marginTop="60dp"
         android:fontFamily="@font/sofia_pro_semi_bold"
         android:gravity="center"
         android:text="Sign Up"
@@ -23,11 +24,12 @@
         android:id="@+id/relativeLayout2"
         android:layout_width="341dp"
         android:layout_height="337dp"
-        android:layout_marginStart="32dp"
-        android:layout_marginBottom="236dp"
+        android:layout_marginTop="12dp"
         android:orientation="vertical"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent">
+        app:layout_constraintEnd_toEndOf="@+id/textView6"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/textView6"
+        app:layout_constraintTop_toBottomOf="@+id/textView6">
 
         <TextView
             android:id="@+id/tvFullName"
@@ -78,39 +80,44 @@
             android:textSize="16sp" />
 
         <EditText
+            android:id="@+id/edtPassword"
             android:layout_width="339dp"
             android:layout_height="65dp"
             android:layout_below="@+id/tvPassword"
             android:layout_marginTop="9dp"
             android:background="@drawable/button_shape_1"
             android:elevation="5dp"
+            android:inputType="textPassword"
             app:backgroundTint="@color/white" />
 
     </RelativeLayout>
 
     <Button
-        android:id="@+id/btnLogin"
+        android:id="@+id/btnSignUp"
         android:layout_width="248dp"
         android:layout_height="60dp"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="16dp"
         android:background="@drawable/button_shape"
         android:fontFamily="@font/sofia_pro_medium"
         android:text="SIGN UP"
         android:textColor="@color/white"
         android:textSize="15sp"
         app:backgroundTint="@color/orange"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.496"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/relativeLayout2"
+        app:layout_constraintHorizontal_bias="0.526"
+        app:layout_constraintStart_toStartOf="@+id/relativeLayout2"
         app:layout_constraintTop_toBottomOf="@+id/relativeLayout2" />
 
     <LinearLayout
+        android:id="@+id/linearLayout"
         android:layout_width="213dp"
         android:layout_height="33dp"
-        android:layout_marginTop="8dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btnLogin">
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="4dp"
+        app:layout_constraintEnd_toEndOf="@+id/btnLogin"
+        app:layout_constraintHorizontal_bias="0.514"
+        app:layout_constraintStart_toStartOf="@+id/btnSignUp"
+        app:layout_constraintTop_toBottomOf="@+id/btnSignUp">
 
         <TextView
             android:layout_width="wrap_content"
@@ -119,7 +126,7 @@
             android:fontFamily="@font/sofia_pro_medium"
             android:gravity="center"
             android:text="Alreday have an account?"
-            android:textAlignment="textStart"
+            android:textAlignment="center"
             android:textColor="@color/black"
             android:textSize="13.5sp" />
 
@@ -128,14 +135,13 @@
             android:layout_height="wrap_content"
             android:layout_marginLeft="0dp"
             android:background="@color/white"
-            android:enabled="false"
             android:fontFamily="@font/sofia_pro_medium"
             android:paddingLeft="0dp"
             android:paddingTop="0dp"
             android:paddingRight="0dp"
             android:paddingBottom="0dp"
             android:text="Login"
-            android:textAlignment="textStart"
+            android:textAlignment="center"
             android:textAllCaps="false"
             android:textColor="@color/orange"
             android:textSize="12sp"
@@ -145,29 +151,27 @@
 
     <TextView
         android:id="@+id/textView2"
-        android:layout_width="80dp"
-        android:layout_height="24dp"
-        android:layout_marginBottom="80dp"
+        android:layout_width="99dp"
+        android:layout_height="25dp"
         android:fontFamily="@font/sofia_pro_medium"
-        android:gravity="center_vertical"
         android:text="Sign up with"
         android:textAlignment="center"
         android:textColor="@color/black"
         android:textSize="14sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintEnd_toEndOf="@+id/linearLayout"
+        app:layout_constraintStart_toStartOf="@+id/linearLayout"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout" />
 
     <TextView
         android:id="@+id/textView"
         android:layout_width="292.46dp"
         android:layout_height="1dp"
         android:layout_gravity="center_vertical"
-        android:layout_marginStart="56dp"
+        android:layout_marginTop="12dp"
         android:background="@drawable/black_line"
-        app:layout_constraintStart_toStartOf="parent"
-        tools:layout_editor_absoluteY="640dp" />
+        app:layout_constraintEnd_toEndOf="@+id/linearLayout"
+        app:layout_constraintStart_toStartOf="@+id/linearLayout"
+        app:layout_constraintTop_toTopOf="@+id/textView2" />
 
     <Button
         android:id="@+id/fbButton"
@@ -180,8 +184,12 @@
         android:textColor="@color/black"
         android:textSize="11sp"
         app:backgroundTint="@color/white"
-        tools:layout_editor_absoluteX="56dp"
-        tools:layout_editor_absoluteY="661dp" />
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/ggButton"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/textView"
+        app:layout_constraintTop_toBottomOf="@+id/textView2"
+        app:layout_constraintVertical_bias="0.217" />
 
     <Button
         android:id="@+id/ggButton"
@@ -195,7 +203,11 @@
         android:textColor="@color/black"
         android:textSize="11sp"
         app:backgroundTint="@color/white"
-        tools:layout_editor_absoluteX="210dp"
-        tools:layout_editor_absoluteY="661dp" />
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/textView"
+        app:layout_constraintTop_toBottomOf="@+id/textView2"
+        app:layout_constraintVertical_bias="0.217" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
+
+
