@@ -18,37 +18,26 @@ class LoginAcitvity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
 
         binding = DataBindingUtil.setContentView(this,R.layout.activity_login)
-
-        //setContentView(R.layout.activity_login)
-
-//        val edtEmail = findViewById<EditText>(R.id.edtEmail)
-//        val edtPassword = findViewById<EditText>(R.id.edtPassword)
-//        val btnLogin = findViewById<Button>(R.id.btnLogin)
-//        val btnSignUp = findViewById<Button>(R.id.btnSignUp)
+        val intentSignUpActivity = Intent(this, SignUpActivity::class.java)
+        val intentProfileActivity = Intent(this, ProfileActivity::class.java)
 
         binding.btnSignUp.setOnClickListener {
-            val intent = Intent(this, SignUpActivity::class.java)
-            startActivity(intent)
+            startActivity(intentSignUpActivity)
             finish()
         }
-
-        binding.btnLogin.setOnClickListener {
-            val intent = Intent(this, ProfileActivity::class.java)
-            if (binding.edtEmail.text.trim().toString().isNullOrEmpty()) {
-                binding.edtEmail.setError("enter email please!");
+        binding.apply {  btnLogin.setOnClickListener {
+            if (edtEmail.text.trim().toString().isNullOrEmpty()) {
+                edtEmail.setError("enter email please!");
             }
-            if (binding.edtPassword.text.trim().toString().isNullOrEmpty()) {
+            if (edtPassword.text.trim().toString().isNullOrEmpty()) {
                 binding.edtPassword.setError("enter password please!");
             }
             if (binding.edtEmail.text.trim().toString() == DataStore.email && binding.edtPassword.text.trim().toString() == DataStore.password) {
                 Toast.makeText(applicationContext, "successful login!", Toast.LENGTH_SHORT).show()
-                val b = Bundle()
-                b.putParcelable("Account", Account(binding.edtEmail.text.trim().toString()))
-                intent.putExtras(b)
-                startActivity(intent)
+                startActivity(intentProfileActivity)
                 finish()
             } else {
-                val alertDialogBuilder = android.app.AlertDialog.Builder(this)
+                val alertDialogBuilder = android.app.AlertDialog.Builder(this@LoginAcitvity)
                 alertDialogBuilder.setMessage("failed login!")
                 alertDialogBuilder.setPositiveButton("OK") {
                         dialog: DialogInterface,
@@ -58,6 +47,7 @@ class LoginAcitvity : AppCompatActivity() {
                         .show()
                 }
                 alertDialogBuilder.show()
+            }
             }
         }
     }
