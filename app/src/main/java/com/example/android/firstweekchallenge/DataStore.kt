@@ -16,11 +16,15 @@ public class DataStore private constructor(){
         var fullName:String?="";
         var email:String?="";
         var password:String?="";
+        var phoneNumber:String?="";
+
 
 
         init{
             println("Account(email='$email', fullName='$fullName', password='$password')")
         }
+
+
 
     }
 
