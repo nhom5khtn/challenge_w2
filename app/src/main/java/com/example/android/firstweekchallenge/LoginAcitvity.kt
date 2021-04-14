@@ -23,7 +23,7 @@ class LoginAcitvity : AppCompatActivity() {
 
         binding.btnSignUp.setOnClickListener {
             startActivity(intentSignUpActivity)
-            finish()
+            //finish()
         }
         binding.apply {  btnLogin.setOnClickListener {
             if (edtEmail.text.trim().toString().isNullOrEmpty()) {
@@ -35,7 +35,7 @@ class LoginAcitvity : AppCompatActivity() {
             if (binding.edtEmail.text.trim().toString() == DataStore.email && binding.edtPassword.text.trim().toString() == DataStore.password) {
                 Toast.makeText(applicationContext, "successful login!", Toast.LENGTH_SHORT).show()
                 startActivity(intentProfileActivity)
-                finish()
+                //finish()
             } else {
                 val alertDialogBuilder = android.app.AlertDialog.Builder(this@LoginAcitvity)
                 alertDialogBuilder.setMessage("failed login!")

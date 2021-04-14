@@ -42,7 +42,7 @@ class SignUpActivity : AppCompatActivity() {
 
                 Toast.makeText(applicationContext, "successful sign up!", Toast.LENGTH_SHORT).show()
                 startActivity(intent)
-                finish()
+                //finish()
             }else{
                 val alertDialogBuilder = android.app.AlertDialog.Builder(this@SignUpActivity)
                 alertDialogBuilder.setMessage("failed sign up!")
